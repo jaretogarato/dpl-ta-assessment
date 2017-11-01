@@ -2,7 +2,7 @@
 <p>Use Create-React-App to make api calls to imdb database and display the movies</p>
 <a href='http://www.theimdbapi.org/'>API Docs</a>
 
-<a href='dpl-ta-technical.surge.sh'>Example of answer</a>
+<a href='http://dpl-ta-technical.surge.sh/'>Example of answer</a>
 <br />
 <br />
 

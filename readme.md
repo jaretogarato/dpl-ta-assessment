@@ -4,6 +4,8 @@
   <li>Implement an input to search for a movie title</li>
   <li>Display the movie to the user</li>
   <li>You will not be judge on how it looks</li>
+  <li>Feel free to utilize only resource</li>
+  <li>Do not use other people as a resource</li>
 </ul>
 
 <a href='http://www.theimdbapi.org/'>API Docs</a>

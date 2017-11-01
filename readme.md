@@ -1,5 +1,11 @@
 <h1>IMDB React App</h1>
 <p>Use Create-React-App to make api calls to imdb database and display the movies</p>
+<ul>
+  <li>Implement an input to search for a movie title</li>
+  <li>Display the movie to the user</li>
+  <li>You will not be judge on how it looks</li>
+</ul>
+
 <a href='http://www.theimdbapi.org/'>API Docs</a>
 
 <a href='http://dpl-ta-technical.surge.sh/'>Example of answer</a>
@@ -14,4 +20,3 @@
   <li>Go through the surge process</li>
   <li>slack me the url link to your assessment answers</li>
 </ul>
-

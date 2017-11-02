@@ -26,10 +26,10 @@
 
 <h1>DPL TA Technical</h1>
 
-<p>write a ruby method that takes in a word from the user and returns back the middle letter. (if the word has an even amount of letter return back the two letters)</p>
+<p>write a ruby method that takes in a word from the user and returns back the middle letter. (If the word has an even amount of letters return the middle two letters)</p>
 
 <ul>
-  <li>Feel free to utilize only resource</li>
+  <li>Feel free to utilize any resource</li>
   <li>Do not use other people as a resource</li>
 </ul>
 

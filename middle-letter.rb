@@ -22,7 +22,7 @@ fill_screen = Proc.new do |columns, lines, r, g, b|
   end
 end
 
-def color_shift (someProc)
+def color_shift(someProc)
   for i in (0..36)
     red = (((Math::sin((i * 10).degrees) + 1) / 2) * 255).to_i
     green = (((Math::sin((i * 10 - 60).degrees) + 1) / 2) * 255).to_i
@@ -35,8 +35,8 @@ end
 def middle_letter(input)
   len = input.length
 
-  puts "columns: #{$columns}"
-  puts "lines: #{$lines}"
+  # puts "columns: #{$columns}"
+  # puts "lines: #{$lines}"
 
   if len % 2 == 0
     char1 = input[(len / 2 - 1).to_i]
@@ -83,5 +83,8 @@ while true do
     puts "Goodbye!"
     break
   end
+  color_shift(fill_screen)
+  system "clear" or system "cls"
+
   middle_letter(input)
 end

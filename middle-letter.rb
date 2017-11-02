@@ -23,7 +23,7 @@ fill_screen = Proc.new do |columns, lines, r, g, b|
 end
 
 def color_shift(someProc)
-  for i in (0..36)
+  for i in (0..24)
     red = (((Math::sin((i * 10).degrees) + 1) / 2) * 255).to_i
     green = (((Math::sin((i * 10 - 60).degrees) + 1) / 2) * 255).to_i
     blue = (((Math::sin((i * 10 - 120).degrees) + 1) / 2) * 255).to_i
@@ -71,7 +71,6 @@ def welcome_message
   puts Rainbow("").bg(:blue)
 end
 
-color_shift(fill_screen)
 system "clear" or system "cls"
 welcome_message()
 
@@ -83,6 +82,7 @@ while true do
     puts "Goodbye!"
     break
   end
+
   color_shift(fill_screen)
   system "clear" or system "cls"
 

@@ -41,7 +41,7 @@ def middle_letter(input)
   if len % 2 == 0
     char1 = input[(len / 2 - 1).to_i]
     char2 = input[(len / 2).to_i]
-
+    puts "You input the string: #{input}"
     puts "Your string was of an even number of characters."
     puts ("These are the middle two characters: #{char1}, #{char2}")
   else

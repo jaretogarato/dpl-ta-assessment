@@ -4,8 +4,9 @@ require 'rainbow/ext/string'
 require 'highline/import'
 
 $columns = HighLine::SystemExtensions.terminal_size[0].to_i
-$lines = HighLine::SystemExtensions.terminal_size[1].to_i
 $message_length = 60
+$before_and_after = (($columns - $message_length) / 2).floor.to_i
+$lines = HighLine::SystemExtensions.terminal_size[1].to_i
 
 class Numeric
   def degrees
@@ -51,24 +52,85 @@ def middle_letter(input)
   end
 
   puts ""
-  puts Rainbow("------------------------------------------------------------").bg(:blue)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow('          Enter another string, or type q to exit           ').black.bg(:green)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow("------------------------------------------------------------").bg(:blue)
-  puts ""
+
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+  print Rainbow("------------------------------------------------------------").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+
+  for i in 1..$columns
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+  print Rainbow('          Enter another string, or type q to exit           ').black.bg(:green)
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$columns
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+  print Rainbow("------------------------------------------------------------").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+
+  puts "\n \n"
 end
 
 def welcome_message
-  puts Rainbow("------------------------------------------------------------").bg(:blue)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow("    Enter a string, and I'll return the middle letter(s)    ").bg(:blue)
-  puts Rainbow('          ( You can enter "q" to exit at any time )         ').bg(:blue)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow("                                                            ").bg(:blue)
-  puts Rainbow("------------------------------------------------------------").bg(:blue)
-  puts Rainbow("").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+  print Rainbow("------------------------------------------------------------").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+
+  for i in 1..$columns
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+  print Rainbow("    Enter a string, and I'll return the middle letter(s)    ").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+  print Rainbow('          ( You can enter "q" to exit at any time )         ').bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow(" ").bg(:blue)
+  end
+  puts "\n"
+
+  for i in 1..$columns
+    print Rainbow(" ").bg(:blue)
+  end
+
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+  print Rainbow("------------------------------------------------------------").bg(:blue)
+  for i in 1..$before_and_after
+    print Rainbow("-").bg(:blue)
+  end
+  puts "\n \n"
+  # puts Rainbow("\n \n").bg(:blue)
 end
 
 system "clear" or system "cls"
